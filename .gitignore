@@ -1,3 +1,27 @@
 .DS_Store
 Thumbs.db
 *.log
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.env*.local
+.vercel
+
+# typescript
+*.tsbuildinfo
