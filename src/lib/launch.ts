@@ -8,6 +8,9 @@ export const launchConfig = {
 export const launchNotice =
   "Untopo est actuellement accessible gratuitement pendant sa phase de lancement.";
 
+export const launchBannerText =
+  "Phase de lancement en cours — accès gratuit jusqu'à la sortie officielle.";
+
 export const launchFeatureCards = [
   {
     title: "Créez des rapports plus rapidement",

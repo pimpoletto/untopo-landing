@@ -8,35 +8,22 @@ import { Section } from "@/components/ui/section";
 export const metadata: Metadata = {
   title: "Tarifs",
   description:
-    "Untopo Pro à partir de 49 €/mois. Accès gratuit pendant la phase de lancement. Tarifs transparents pour experts fuites.",
+    "Untopo est actuellement gratuit pendant sa phase de lancement. Découvrez la grille tarifaire prévue pour la sortie officielle.",
 };
 
 export default function PricingPage() {
   return (
     <>
-      <Section className="pb-8 pt-14 sm:pt-20">
+      <Section className="pb-8 pt-14 sm:pb-8 sm:pt-20 lg:pb-10 lg:pt-24">
         <PageHero
           eyebrow="Tarifs"
-          title="Des tarifs clairs, un accès gratuit pour démarrer"
-          description="Commencez gratuitement pendant la phase de lancement. Les tarifs Pro ci-dessous seront activés ultérieurement."
+          title="Phase de lancement : accès gratuit jusqu'à la sortie officielle"
+          description="Untopo est actuellement accessible gratuitement pendant sa phase de lancement. Les tarifs ci-dessous correspondent à la formule prévue lors du lancement officiel."
         />
       </Section>
 
-      <Section className="pt-0">
-        <PricingCards />
-      </Section>
-
-      <Section>
-        <div className="mx-auto max-w-3xl space-y-4 text-sm text-muted-foreground">
-          <p>
-            La facturation sera activée ultérieurement. Les montants affichés sont hors TVA et
-            indicatifs.
-          </p>
-          <p>
-            L&apos;offre annuelle correspond à 10 mois facturés (2 mois offerts par rapport au
-            tarif mensuel).
-          </p>
-        </div>
+      <Section className="pt-0 sm:pt-0 lg:pt-0">
+        <PricingCards launchMode />
       </Section>
 
       <CtaBanner />

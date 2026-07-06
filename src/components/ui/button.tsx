@@ -42,10 +42,12 @@ export function Button({
   );
 
   if (href) {
+    const { onClick } = props;
     return (
       <Link
         href={href}
         className={classes}
+        onClick={onClick as React.MouseEventHandler<HTMLAnchorElement> | undefined}
         {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       >
         {children}

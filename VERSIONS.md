@@ -6,7 +6,11 @@
 
 | --- | --- | --- |
 
-| **v2** | `/` | Active — landing Sentry-inspired |
+| **v4-launch** | `/` | Active — landing phase de lancement gratuite |
+
+| **v3-paid-final** | `/v3-paid-final` | Archivée — landing finale payante |
+
+| **v2** | n/a | Archivée — base de travail de la landing actuelle |
 
 | **v1** | `/v1` | Archivée — landing marketing classique |
 

@@ -5,16 +5,79 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 import { Logo } from "@/components/brand/logo";
-import { LandingThemeToggle } from "@/components/landing/landing-theme-toggle";
 import { useLandingThemeOptional } from "@/components/landing/landing-theme-provider";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
+import { useAppSession } from "@/hooks/use-app-session";
 import { navLinks, siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
+
+function HeaderAuthActions({
+  isLandingDark,
+  loggedIn,
+  onNavigate,
+  className,
+  hideWhenLoggedIn,
+}: {
+  isLandingDark: boolean;
+  loggedIn: boolean | null;
+  onNavigate?: () => void;
+  className?: string;
+  hideWhenLoggedIn?: boolean;
+}) {
+  if (hideWhenLoggedIn && loggedIn) return null;
+
+  if (loggedIn) {
+    return (
+      <div className={className}>
+        <Button
+          href={siteConfig.appUrl}
+          variant="ghost"
+          size="sm"
+          className="bg-[var(--cta-primary)] !text-white shadow-sm hover:bg-[var(--cta-primary-hover)]"
+          onClick={onNavigate}
+        >
+          Tableau de bord
+        </Button>
+      </div>
+    );
+  }
+
+  return (
+    <div className={className}>
+      <Button
+        href={siteConfig.appUrl}
+        variant="ghost"
+        size="sm"
+        external
+        className={cn(
+          "border bg-transparent",
+          isLandingDark
+            ? "border-white/30 !text-white hover:bg-white/10"
+            : "border-border !text-foreground hover:bg-muted/50",
+        )}
+        onClick={onNavigate}
+      >
+        Connexion
+      </Button>
+      <Button
+        href={siteConfig.appUrl}
+        variant="ghost"
+        size="sm"
+        external
+        className="bg-[var(--cta-primary)] !text-white shadow-sm hover:bg-[var(--cta-primary-hover)]"
+        onClick={onNavigate}
+      >
+        Commencer gratuitement
+      </Button>
+    </div>
+  );
+}
 
 export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const loggedIn = useAppSession();
   const landingTheme = useLandingThemeOptional();
   const isLanding = pathname === "/";
   const isLandingDark = isLanding && landingTheme?.theme === "dark";
@@ -22,10 +85,8 @@ export function SiteHeader() {
   return (
     <header
       className={cn(
-        "site-header sticky top-0 z-50 backdrop-blur-md",
-        isLandingDark
-          ? "border-b border-white/10 bg-[#14102a]/85"
-          : "border-b border-border/80 bg-background/90",
+        "site-header sticky top-0 z-50",
+        isLandingDark ? "bg-[#14102a]" : "bg-background",
       )}
     >
       <Container className="flex h-16 items-center justify-between gap-4">
@@ -52,46 +113,23 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-2 md:flex">
-          <LandingThemeToggle />
-          <Button
-            href={siteConfig.appUrl}
-            variant="ghost"
-            size="sm"
-            external
-            className={cn(
-              isLandingDark && "text-white/80 hover:bg-white/10 hover:text-white",
-            )}
-          >
-            Connexion
-          </Button>
-          {isLanding ? (
-            <Button
-              href="/#apercu"
-              size="sm"
-              className={cn(
-                isLandingDark
-                  ? "border border-[#7c9eff]/50 bg-transparent text-white hover:bg-white/10"
-                  : "border border-primary/25 bg-transparent text-primary-strong hover:bg-primary-soft",
-              )}
-            >
-              Voir l&apos;application
-            </Button>
-          ) : null}
-          <Button
-            href={siteConfig.appUrl}
-            size="sm"
-            external
-            className={cn(
-              isLandingDark && "bg-white text-[#14102a] hover:bg-white/90",
-            )}
-          >
-            Commencer gratuitement
-          </Button>
-        </div>
+        <HeaderAuthActions
+          isLandingDark={isLandingDark}
+          loggedIn={loggedIn}
+          className="hidden items-center gap-2 md:flex"
+        />
 
         <div className="flex items-center gap-2 md:hidden">
-          <LandingThemeToggle />
+          {loggedIn ? (
+            <Button
+              href={siteConfig.appUrl}
+              variant="ghost"
+              size="sm"
+              className="bg-[var(--cta-primary)] !text-white shadow-sm hover:bg-[var(--cta-primary-hover)]"
+            >
+              Tableau de bord
+            </Button>
+          ) : null}
           <button
             type="button"
             className={cn(
@@ -143,28 +181,16 @@ export function SiteHeader() {
                 {link.label}
               </Link>
             ))}
-            <div
+            <HeaderAuthActions
+              isLandingDark={isLandingDark}
+              loggedIn={loggedIn}
+              hideWhenLoggedIn
+              onNavigate={() => setOpen(false)}
               className={cn(
                 "mt-2 flex flex-col gap-2 border-t pt-3",
                 isLandingDark ? "border-white/10" : "border-border",
               )}
-            >
-              <Button
-                href={siteConfig.appUrl}
-                variant="ghost"
-                external
-                className={cn(isLandingDark && "text-white hover:bg-white/10")}
-              >
-                Connexion
-              </Button>
-              <Button
-                href={siteConfig.appUrl}
-                external
-                className={cn(isLandingDark && "bg-white text-[#14102a] hover:bg-white/90")}
-              >
-                Commencer gratuitement
-              </Button>
-            </div>
+            />
           </Container>
         </div>
       ) : null}

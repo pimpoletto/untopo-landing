@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { V2HomePage } from "@/versions/v2/home-page";
+import { V4LaunchHomePage } from "@/versions/v4-launch/home-page";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -13,5 +13,5 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  return <V2HomePage />;
+  return <V4LaunchHomePage />;
 }

@@ -10,7 +10,6 @@ export const siteConfig = {
 } as const;
 
 export const navLinks = [
-  { href: "/fonctionnalites", label: "Fonctionnalités" },
   { href: "/tarifs", label: "Tarifs" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
@@ -25,7 +24,7 @@ export const footerLegalLinks = [
 ] as const;
 
 export const TRIAL_REPORTS = 20;
-export const PRO_PRICE_MONTHLY_EUR = 49;
+export const PRO_PRICE_MONTHLY_EUR = 39;
 export const PRO_PRICE_ANNUAL_EUR = PRO_PRICE_MONTHLY_EUR * 10;
 
 export const features = [
@@ -69,33 +68,37 @@ export const features = [
 
 export const faqItems = [
   {
-    question: "À qui s'adresse Untopo ?",
+    question: "Untopo fonctionne-t-il sur téléphone et ordinateur ?",
     answer:
-      "Untopo est pensé pour les professionnels de la détection de fuites et experts terrain : techniciens, bureaux d'études et indépendants qui rédigent des rapports d'intervention après chaque visite.",
+      "Oui. Untopo a été conçu pour fonctionner aussi bien sur mobile que sur ordinateur, afin de s'adapter à votre manière de travailler sur le terrain, en déplacement ou au bureau.",
   },
   {
-    question: "Faut-il une formation pour utiliser l'app ?",
+    question: "Est-ce que l'application fonctionne sans réseau ou sans 4G ?",
     answer:
-      "Non. L'objectif est zéro formation : vous parlez, vous photographiez, vous validez. L'interface évite les parcours complexes et les formulaires à plusieurs étapes.",
+      "Oui. Vous pouvez ouvrir un rapport, ajouter des informations, prendre des photos et continuer votre intervention même sans connexion. Dès que votre appareil retrouve du réseau, les données se synchronisent automatiquement.",
   },
   {
-    question: "Comment accéder à Untopo aujourd'hui ?",
-    answer:
-      "Untopo est actuellement accessible gratuitement pendant sa phase de lancement. Créez un compte sur l'application — sans carte bancaire.",
+    question: "Faut-il installer un logiciel ?",
+    answer: "Non. Untopo fonctionne directement depuis votre navigateur web, sans installation.",
   },
   {
-    question: "Que comprend l'offre Pro ?",
+    question: "Les rapports PDF sont-ils conformes pour les assurances et les syndics ?",
     answer:
-      "Untopo Pro débloque les exports PDF illimités, la modification illimitée des rapports, l'historique complet et le carnet de contacts & lieux.",
+      "Oui. Les rapports générés par Untopo intègrent les informations essentielles attendues dans le cadre d'un sinistre : identification du demandeur, distinction entre l'origine et les zones sinistrées, relevés des appareils de mesure et intégration claire des photos.",
   },
   {
-    question: "Puis-je utiliser Untopo sans connexion ?",
+    question: "Puis-je personnaliser mes rapports avec mon logo ?",
     answer:
-      "Oui pour la création et l'édition de brouillons. La transcription vocale, la génération PDF et l'envoi par email nécessitent une connexion.",
+      "Oui. Vous pouvez ajouter votre logo afin de personnaliser automatiquement vos rapports et e-mails aux couleurs de votre entreprise.",
   },
   {
-    question: "Où sont hébergées mes données ?",
+    question: "Mes anciens rapports sont-ils conservés ?",
     answer:
-      "Les données sont hébergées via des prestataires conformes (Supabase, Vercel). Consultez notre politique de confidentialité pour le détail des traitements et sous-traitants.",
+      "Oui. Untopo conserve l'historique de vos interventions afin de retrouver facilement vos anciens rapports et informations de chantier.",
+  },
+  {
+    question: "Puis-je envoyer mes rapports directement depuis Untopo ?",
+    answer:
+      "Oui. Les rapports peuvent être envoyés directement depuis l'application avec une mise en page d'e-mail professionnelle.",
   },
 ] as const;

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function FaqPage() {
   return (
     <>
-      <Section className="pb-8 pt-14 sm:pt-20">
+      <Section className="pb-8 pt-14 sm:pb-8 sm:pt-20 lg:pb-10 lg:pt-24">
         <PageHero
           eyebrow="FAQ"
           title="Questions fréquentes"
@@ -22,7 +22,7 @@ export default function FaqPage() {
         />
       </Section>
 
-      <Section className="pt-0">
+      <Section className="pt-0 sm:pt-0 lg:pt-0">
         <div className="mx-auto max-w-3xl">
           <FaqList />
         </div>

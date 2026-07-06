@@ -33,7 +33,7 @@ const workflow = [
 export default function FeaturesPage() {
   return (
     <>
-      <Section className="pb-10 pt-14 sm:pt-20">
+      <Section className="pb-10 pt-14 sm:pb-10 sm:pt-20 lg:pb-12 lg:pt-24">
         <PageHero
           eyebrow="Fonctionnalités"
           title="Un assistant terrain, pas un logiciel de gestion"
@@ -41,7 +41,7 @@ export default function FeaturesPage() {
         />
       </Section>
 
-      <Section className="pt-0">
+      <Section className="pt-0 sm:pt-0 lg:pt-0">
         <div className="grid gap-4 sm:grid-cols-3">
           {workflow.map((item) => (
             <div
