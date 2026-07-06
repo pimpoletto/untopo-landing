@@ -70,7 +70,7 @@ export default function RootLayout({
     >
       <body className={`${geistSans.className} flex min-h-full flex-col antialiased`}>
         <Script id="landing-theme-init" strategy="beforeInteractive">
-          {`(function(){try{var p=window.location.pathname;if(p!=="/"&&p!=="")return;var s=localStorage.getItem("untopo-landing-theme");var t=s==="light"||s==="dark"?s:"dark";document.documentElement.setAttribute("data-landing-theme",t);}catch(e){}})();`}
+          {`(function(){try{var p=window.location.pathname;if(p!=="/"&&p!=="")return;document.documentElement.setAttribute("data-landing-theme","light");}catch(e){}})();`}
         </Script>
         <LandingThemeProvider>
           <SiteHeader />

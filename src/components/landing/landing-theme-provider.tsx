@@ -17,14 +17,7 @@ type LandingThemeContextValue = {
 const LandingThemeContext = createContext<LandingThemeContextValue | null>(null);
 
 function readStoredTheme(): LandingTheme {
-  if (typeof window === "undefined") return "dark";
-  try {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored === "light" || stored === "dark") return stored;
-  } catch {
-    /* ignore */
-  }
-  return "dark";
+  return "light";
 }
 
 function applyLandingTheme(theme: LandingTheme | null) {
@@ -39,7 +32,7 @@ function applyLandingTheme(theme: LandingTheme | null) {
 export function LandingThemeProvider({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const isLanding = pathname === "/";
-  const [theme, setThemeState] = useState<LandingTheme>("dark");
+  const [theme, setThemeState] = useState<LandingTheme>("light");
 
   useEffect(() => {
     setThemeState(readStoredTheme());
@@ -49,18 +42,18 @@ export function LandingThemeProvider({ children }: { children: React.ReactNode }
     applyLandingTheme(isLanding ? theme : null);
   }, [isLanding, theme]);
 
-  const setTheme = useCallback((next: LandingTheme) => {
-    setThemeState(next);
+  const setTheme = useCallback((_next: LandingTheme) => {
+    setThemeState("light");
     try {
-      localStorage.setItem(STORAGE_KEY, next);
+      localStorage.setItem(STORAGE_KEY, "light");
     } catch {
       /* ignore */
     }
   }, []);
 
   const toggleTheme = useCallback(() => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  }, [setTheme, theme]);
+    setTheme("light");
+  }, [setTheme]);
 
   const value = useMemo(
     () => ({ theme, setTheme, toggleTheme, isLanding }),
