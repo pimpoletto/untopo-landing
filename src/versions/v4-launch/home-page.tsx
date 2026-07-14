@@ -16,11 +16,11 @@ export function V4LaunchHomePage() {
       <div className="landing-page__content">
         <section className="landing-hero landing-hero--above-animation">
           <Container className="relative z-20 flex flex-col items-center px-4 pb-20 pt-16 text-center sm:pb-24 sm:pt-20 lg:pb-28 lg:pt-24">
-            <h1 className="landing-hero__title max-w-6xl text-[1.85rem] font-extrabold leading-[1.08] tracking-tight sm:text-4xl md:text-5xl lg:max-w-none lg:text-6xl lg:leading-[1.04] xl:text-[4.5rem]">
+            <h1 className="landing-hero__title max-w-6xl text-[2.0625rem] font-extrabold leading-[1.1] tracking-tight sm:text-4xl sm:leading-[1.08] md:text-5xl lg:max-w-none lg:text-6xl lg:leading-[1.04] xl:text-[4.5rem]">
               Passez moins de <span className="brand-gradient-text">temps</span> sur vos rapports
             </h1>
 
-            <p className="landing-hero__subtitle mt-8 max-w-2xl text-lg font-semibold leading-relaxed sm:mt-10 sm:text-xl sm:leading-relaxed lg:mt-12 lg:text-[1.35rem] lg:leading-snug">
+            <p className="landing-hero__subtitle mt-6 max-w-2xl text-[0.9375rem] font-medium leading-relaxed sm:mt-10 sm:text-xl sm:font-semibold sm:leading-relaxed lg:mt-12 lg:text-[1.35rem] lg:leading-snug">
               Créez, personnalisez et envoyez vos rapports de détection de fuites directement
               depuis votre ordinateur ou votre téléphone.
             </p>

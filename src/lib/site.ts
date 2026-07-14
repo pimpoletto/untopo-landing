@@ -24,7 +24,7 @@ export const footerLegalLinks = [
 ] as const;
 
 export const TRIAL_REPORTS = 20;
-export const PRO_PRICE_MONTHLY_EUR = 39;
+export const PRO_PRICE_MONTHLY_EUR = 49;
 export const PRO_PRICE_ANNUAL_EUR = PRO_PRICE_MONTHLY_EUR * 10;
 
 export const features = [

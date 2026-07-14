@@ -133,8 +133,10 @@ html[data-landing-theme] body {
   overflow-y: visible;
 }
 
-.landing-page--ambient-v1 {
+.landing-page.landing-page--ambient-v1 {
   overflow: visible;
+  overflow-x: visible;
+  overflow-y: visible;
 }
 
 /* Calque de fond page — teinte légère uniquement, sans voiler l'animation */
@@ -156,6 +158,13 @@ html[data-landing-theme="dark"] .landing-page--ambient-v1 .landing-page__ambient
 .landing-page--ambient-v1 .landing-page__content {
   position: relative;
   z-index: 1;
+  overflow: visible;
+}
+
+.landing-page--ambient-v1 .landing-page__hero-animation,
+.landing-page--ambient-v1 .landing-page__hero-animation--creator-v2,
+.landing-page--ambient-v1 .landing-page__hero-animation--creator-v2 .hero-creator-flow-root,
+.landing-page--ambient-v1 .landing-page__hero-animation--creator-v2 .hero-creator-flow {
   overflow: visible;
 }
 
@@ -226,7 +235,9 @@ html[data-landing-theme="dark"] .landing-page--ambient-v1 .landing-page__ambient
   opacity: 0.55;
 }
 
-.landing-page--ambient-v1 .landing-page__hero-animation--creator {
+.landing-page--ambient-v1 .landing-page__hero-animation--creator:not(
+    .landing-page__hero-animation--creator-v2
+  ) {
   height: clamp(360px, 48vh, 460px);
   margin-top: clamp(-4rem, -8vh, -2.5rem);
   margin-bottom: clamp(-1.5rem, -3vh, -0.5rem);
@@ -235,8 +246,23 @@ html[data-landing-theme="dark"] .landing-page--ambient-v1 .landing-page__ambient
 }
 
 .landing-page--ambient-v1 .landing-page__hero-animation--creator-v2 {
-  height: clamp(420px, 56vh, 580px);
+  z-index: 25;
+  height: auto;
+  min-height: clamp(480px, 62vh, 640px);
+  padding-bottom: clamp(2rem, 4vh, 3rem);
   margin-top: clamp(-2.5rem, -5vh, -1rem);
+  margin-bottom: clamp(0.5rem, 1.5vh, 1.25rem);
+  overflow: visible;
+  clip-path: none;
+  contain: none;
+}
+
+.landing-page--ambient-v1 .landing-page__hero-animation--creator-v2 .hero-creator-flow-root {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  overflow: visible;
+  padding-bottom: clamp(2.5rem, 5vh, 4rem);
 }
 
 .landing-page--ambient-v1 .landing-page__section-above-animation {
@@ -244,7 +270,13 @@ html[data-landing-theme="dark"] .landing-page--ambient-v1 .landing-page__ambient
   z-index: 20;
   background: transparent;
   overflow: visible;
-  padding-top: clamp(2.5rem, 6vh, 4.5rem);
+  padding-top: clamp(3.25rem, 7vh, 5rem);
+}
+
+@media (min-width: 1024px) {
+  .landing-page--ambient-v1 .landing-page__section-above-animation {
+    padding-top: clamp(4.5rem, 9vh, 6.5rem);
+  }
 }
 
 .landing-page--ambient-v1 .landing-page__content > section,
@@ -398,6 +430,90 @@ html[data-landing-theme="light"] .landing-hero__cta-secondary:hover {
 
   .landing-hero__trust-item {
     white-space: normal;
+  }
+
+  html[data-landing-theme="light"] .landing-hero__subtitle,
+  html[data-landing-theme="dark"] .landing-hero__subtitle {
+    font-weight: 500;
+  }
+
+  .landing-page--ambient-v1 .landing-page__hero-animation--creator-v2 {
+    height: auto;
+    min-height: auto;
+    padding-bottom: clamp(2rem, 5vh, 2.75rem);
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .landing-page--ambient-v1 .landing-page__hero-animation--creator-v2 .hero-creator-flow-root {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    padding-inline: 1.25rem;
+    padding-bottom: clamp(1.5rem, 4vh, 2rem);
+    overflow: visible;
+  }
+
+  .hero-creator-flow--v2 {
+    width: min(calc(100vw - 2.5rem), 620px);
+  }
+
+  .hero-creator-flow--v2 .hero-creator-flow__device {
+    min-height: 240px;
+  }
+
+  .hero-creator-flow--v2 .hero-creator-flow__viewport {
+    min-height: 196px;
+    padding: 8px 10px 10px;
+  }
+
+  .hero-creator-flow--v2 .hero-creator-flow__scene {
+    inset: 8px 10px 10px;
+  }
+
+  .hero-creator-flow--v2 .hero-creator-flow__header-title {
+    font-size: 0.75rem;
+  }
+
+  .hero-creator-flow--v2 .hero-creator-flow__section-label,
+  .hero-creator-flow--v2 .hero-creator-flow__progress-step,
+  .hero-creator-flow--v2 .hero-creator-flow__percent,
+  .hero-creator-flow--v2 .hero-creator-flow__result-name,
+  .hero-creator-flow--v2 .hero-creator-flow__send-success {
+    font-size: 0.625rem;
+  }
+
+  .hero-creator-flow--v2 .hero-creator-flow__zone-title,
+  .hero-creator-flow--v2 .hero-creator-flow__section-collapsed {
+    font-size: 0.625rem;
+  }
+
+  .hero-creator-flow--v2 .hero-creator-flow__generate-btn {
+    min-height: 38px;
+    font-size: 0.75rem;
+  }
+
+  .hero-creator-flow--v2 .hero-creator-flow__action {
+    min-height: 34px;
+    font-size: 0.625rem;
+  }
+
+  .hero-creator-flow--v2 .hero-creator-flow__progress-title {
+    font-size: 0.75rem;
+  }
+
+  .hero-creator-flow--v2 .hero-creator-flow__pdf-preview {
+    min-height: 84px;
+  }
+
+  .hero-creator-flow__chrome {
+    padding: 8px 10px;
+    gap: 6px;
+  }
+
+  .hero-creator-flow__back {
+    width: 16px;
+    height: 16px;
   }
 }
 
@@ -3744,10 +3860,11 @@ html[data-landing-theme="dark"] .pdf-illustration__sheet--front {
 }
 
 .pdf-preview__chrome {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 12px 16px;
+  padding: 12px 5.75rem 12px 16px;
   border-bottom: 1px solid hsl(var(--border));
   background: hsl(var(--muted) / 0.4);
 }
@@ -3760,7 +3877,12 @@ html[data-landing-theme="dark"] .pdf-illustration__sheet--front {
 }
 
 .pdf-preview__filename {
+  flex: 1;
+  min-width: 0;
   margin-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: 0.78rem;
   color: hsl(var(--muted-foreground));
 }
@@ -3771,6 +3893,40 @@ html[data-landing-theme="dark"] .pdf-illustration__sheet--front {
   height: var(--pdf-frame-h);
   overflow: hidden;
   background: hsl(var(--muted) / 0.25);
+}
+
+.pdf-preview__badge {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  box-shadow: 0 10px 20px -8px hsl(0 72% 45% / 0.55);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+@media (max-width: 639px) {
+  .pdf-preview__chrome {
+    padding-right: 5rem;
+  }
+
+  .pdf-preview__badge {
+    right: 10px;
+    height: 28px;
+    padding: 0 10px;
+    font-size: 0.6875rem;
+  }
 }
 
 .pdf-preview__scroll {
@@ -5142,6 +5298,7 @@ html[data-landing-theme="light"] .hero-workflow__chip-label {
   --creator-ease: cubic-bezier(0.22, 1, 0.36, 1);
   position: relative;
   margin: 0 auto;
+  overflow: visible;
 }
 
 .hero-creator-flow--v1 {
@@ -5150,6 +5307,7 @@ html[data-landing-theme="light"] .hero-workflow__chip-label {
 
 .hero-creator-flow--v2 {
   width: min(99vw, 780px);
+  padding-bottom: 0.5rem;
 }
 
 .hero-creator-flow--v2 .hero-creator-flow__device {
@@ -5207,17 +5365,27 @@ html[data-landing-theme="light"] .hero-workflow__chip-label {
   min-height: 120px;
 }
 
-.hero-creator-flow__glow {
+.hero-creator-flow__device-shell {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  overflow: visible;
+}
+
+.hero-creator-flow__device-shell::before {
+  content: "";
   position: absolute;
-  inset: -18% -12%;
-  background:
-    radial-gradient(ellipse 70% 55% at 50% 42%, hsl(217 92% 57% / 0.14), transparent 68%),
-    radial-gradient(ellipse 50% 40% at 50% 88%, hsl(219 79% 57% / 0.08), transparent 70%);
+  z-index: 0;
+  inset: -10% -8% 0;
   pointer-events: none;
+  background:
+    radial-gradient(ellipse 72% 52% at 50% 38%, hsl(217 92% 57% / 0.14), transparent 68%),
+    radial-gradient(ellipse 48% 32% at 50% 82%, hsl(219 79% 57% / 0.06), transparent 72%);
 }
 
 .hero-creator-flow__device {
   position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -5226,10 +5394,20 @@ html[data-landing-theme="light"] .hero-workflow__chip-label {
   border: 1px solid hsl(var(--border));
   background: hsl(var(--card));
   box-shadow:
-    0 24px 48px -28px hsl(219 45% 25% / 0.35),
+    0 24px 48px -20px hsl(219 45% 25% / 0.32),
     0 0 0 1px rgb(255 255 255 / 0.65) inset;
-  overflow: hidden;
+  overflow: visible;
   animation: creator-device-float var(--creator-cycle) ease-in-out infinite;
+}
+
+.hero-creator-flow__device-inner {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+  border-radius: inherit;
 }
 
 .hero-creator-flow__chrome {

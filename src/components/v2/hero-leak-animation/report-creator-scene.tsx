@@ -36,14 +36,14 @@ function ZoneCard({
 export function HeroReportCreatorScene({ variant = "v2" }: { variant?: HeroReportCreatorVariant }) {
   return (
     <div className={cn("hero-creator-flow", `hero-creator-flow--${variant}`)}>
-      <div className="hero-creator-flow__glow" aria-hidden />
-
-      <div
-        className="hero-creator-flow__device"
-        role="img"
-        aria-label="Animation : création et envoi d'un rapport PDF dans Untopo"
-      >
-        <div className="hero-creator-flow__chrome">
+      <div className="hero-creator-flow__device-shell">
+        <div
+          className="hero-creator-flow__device"
+          role="img"
+          aria-label="Animation : création et envoi d'un rapport PDF dans Untopo"
+        >
+          <div className="hero-creator-flow__device-inner">
+            <div className="hero-creator-flow__chrome">
           <span className="hero-creator-flow__back" aria-hidden />
           <span className="hero-creator-flow__header-title">Rapport</span>
           <span className="hero-creator-flow__status hero-creator-flow__status--draft">Brouillon</span>
@@ -160,6 +160,8 @@ export function HeroReportCreatorScene({ variant = "v2" }: { variant?: HeroRepor
               </svg>
             </div>
           </div>
+          </div>
+        </div>
         </div>
       </div>
     </div>
