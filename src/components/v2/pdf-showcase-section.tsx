@@ -42,7 +42,7 @@ export function PdfShowcaseSection() {
           {/* Colonne gauche : titre + illustration */}
           <div className="flex flex-col">
             <h2 className="text-3xl font-bold leading-[1.1] tracking-tight sm:text-4xl lg:text-5xl">
-              Rapports PDF professionnels
+              Rapport PDF professionnels
             </h2>
             <p className="mt-5 max-w-md text-base leading-relaxed text-muted-foreground sm:text-lg">
               Untopo transforme en un clic vos interventions en rapports PDF clairs, structurés et
