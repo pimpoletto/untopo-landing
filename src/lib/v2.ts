@@ -114,7 +114,7 @@ export const v2Features = [
 
 export const v2Difference = [
   {
-    title: "Pensé pour les détecteurs de fuites",
+    title: "Pensé pour les spécialistes",
     description:
       "Untopo a été développé avec des professionnels du terrain afin de reproduire leur véritable manière de travailler. Chaque écran, chaque action et chaque étape du processus ont été conçus pour réduire les frictions et accélérer la création des rapports.",
   },

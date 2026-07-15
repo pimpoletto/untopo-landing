@@ -43,7 +43,7 @@ export function CreatorShowcaseSection() {
           {/* Texte */}
           <div className="lg:order-2">
             <h2 className="text-3xl font-bold leading-[1.1] tracking-tight sm:text-4xl lg:text-5xl">
-              Pensé pour les détecteurs de fuites
+              Pensé pour les spécialistes
             </h2>
             <p className="mt-6 leading-relaxed text-muted-foreground sm:text-lg">
               Untopo a été développé avec des professionnels du terrain afin de créer une expérience
