@@ -1,3 +1,7 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 
@@ -24,17 +28,18 @@ function VoiceIllustration() {
 }
 
 export function VoiceShowcaseSection() {
+  const t = useTranslations("VoiceShowcase");
+
   return (
     <Section id="dictee-vocale">
       <Container>
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
             <h2 className="text-3xl font-bold leading-[1.1] tracking-tight sm:text-4xl lg:text-5xl">
-              Une rédaction plus simple
+              {t("title")}
             </h2>
             <p className="mt-5 max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Dictez votre rapport oralement ou rédigez-le manuellement. Untopo peut ensuite corriger
-              et peaufiner automatiquement votre texte, sans modifier le sens de vos observations.
+              {t("description")}
             </p>
           </div>
 

@@ -50,12 +50,20 @@ function formatInline(text: string) {
   });
 }
 
-export function LegalDoc({ title, content }: { title: string; content: string }) {
+export function LegalDoc({
+  title,
+  content,
+  eyebrow,
+}: {
+  title: string;
+  content: string;
+  eyebrow: string;
+}) {
   return (
     <article className="py-14 sm:py-20">
       <Container className="max-w-3xl prose-legal">
         <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary-strong">
-          Légal
+          {eyebrow}
         </p>
         <div className="sr-only">{title}</div>
         {renderMarkdown(content)}

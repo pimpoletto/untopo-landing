@@ -1,9 +1,10 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import type { ReactNode } from "react";
 
 import { FeatureIcon } from "@/components/icons";
-import { v2Features } from "@/lib/v2";
-
-/* —— Illustrations (fragments d'UI thématiques) —— */
+import { v2FeatureIcons } from "@/lib/site";
 
 function IllustrationReport() {
   return (
@@ -123,22 +124,24 @@ const ILLUSTRATIONS: Record<string, ReactNode> = {
 };
 
 export function V2FeatureCards() {
+  const t = useTranslations("V2Features");
+
   return (
     <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {v2Features.map((feature) => (
-        <article key={feature.title} className="feature-card">
+      {v2FeatureIcons.map((icon) => (
+        <article key={icon} className="feature-card">
           <div className="feature-card__body">
             <div className="flex items-center gap-3">
               <span className="flex size-9 items-center justify-center rounded-lg bg-primary-soft text-primary-strong">
-                <FeatureIcon name={feature.icon} className="size-5" />
+                <FeatureIcon name={icon} className="size-5" />
               </span>
-              <h3 className="text-base font-semibold tracking-tight">{feature.title}</h3>
+              <h3 className="text-base font-semibold tracking-tight">{t(`${icon}.title`)}</h3>
             </div>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              {feature.description}
+              {t(`${icon}.description`)}
             </p>
           </div>
-          <div className="feature-card__illu">{ILLUSTRATIONS[feature.icon]}</div>
+          <div className="feature-card__illu">{ILLUSTRATIONS[icon]}</div>
         </article>
       ))}
     </div>

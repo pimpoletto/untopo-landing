@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
@@ -10,28 +13,27 @@ const PDF_PAGES = [
 ] as const;
 
 export function PdfShowcaseSection() {
+  const t = useTranslations("PdfShowcase");
+
   return (
     <Section id="generation-pdf">
       <Container>
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          {/* Colonne gauche : titre + texte */}
           <div className="flex flex-col">
             <h2 className="text-3xl font-bold leading-[1.1] tracking-tight sm:text-4xl lg:text-5xl">
-              Rapport PDF professionnels
+              {t("title")}
             </h2>
             <p className="mt-5 max-w-md text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Untopo transforme en un clic vos interventions en rapports PDF clairs, structurés et
-              prêts à transmettre — directement à vos clients ou à leur assurance.
+              {t("description")}
             </p>
           </div>
 
-          {/* Colonne droite : encart PDF défilant */}
           <div className="pdf-preview">
             <div className="pdf-preview__chrome">
               <span className="pdf-preview__dot" />
               <span className="pdf-preview__dot" />
               <span className="pdf-preview__dot" />
-              <span className="pdf-preview__filename">rapport-detection.pdf</span>
+              <span className="pdf-preview__filename">{t("filename")}</span>
               <span className="pdf-preview__badge" aria-hidden>
                 PDF
               </span>
@@ -42,7 +44,7 @@ export function PdfShowcaseSection() {
                   <Image
                     key={src}
                     src={src}
-                    alt={`Rapport Untopo — page ${index + 1}`}
+                    alt={t("pageAlt", { page: index + 1 })}
                     width={723}
                     height={1024}
                     className="pdf-preview__page"

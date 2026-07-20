@@ -1,0 +1,300 @@
+{
+  "Meta": {
+    "title": "Untopo: Leak detection reports.",
+    "description": "Create leak detection reports faster. Untopo simplifies creating and sending professional leak detection reports.",
+    "ogLocale": "en_US"
+  },
+  "Nav": {
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "mainAria": "Main navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "menu": "Menu",
+    "login": "Log in",
+    "startFree": "Start for free",
+    "dashboard": "Dashboard",
+    "homeAria": "home"
+  },
+  "Footer": {
+    "product": "Product",
+    "legal": "Legal",
+    "contact": "Contact",
+    "openApp": "Open the app",
+    "rights": "All rights reserved.",
+    "legalNotice": "Legal notice",
+    "terms": "Terms of use",
+    "privacy": "Privacy",
+    "dataRetention": "Data retention",
+    "launchPhase": "Launch phase"
+  },
+  "LanguageSwitcher": {
+    "label": "Language",
+    "fr": "FR",
+    "en": "EN",
+    "frName": "Français",
+    "enName": "English"
+  },
+  "Home": {
+    "title": "Spend less <gradient>time</gradient> on your reports",
+    "subtitle": "Create, customize, and send your leak detection reports directly from your computer or phone.",
+    "cta": "Start for free",
+    "trustAria": "Key points",
+    "trustNoInstall": "No installation",
+    "trustDevices": "Available on desktop and mobile",
+    "trustTrial": "{count} free reports on signup",
+    "featuresTitle": "Everything you need for your reports",
+    "featuresSubtitle": "Create, customize, export, and send your leak detection reports from a single interface.",
+    "ctaTitle": "Enjoy free access during the launch phase",
+    "ctaSubtitle": "Create, customize, and send your reports now, then discover the plan planned for the official release."
+  },
+  "PdfShowcase": {
+    "title": "Professional PDF reports",
+    "description": "Untopo turns your interventions into clear, structured PDF reports ready to send — directly to your clients or their insurer — in one click.",
+    "filename": "leak-detection-report.pdf",
+    "pageAlt": "Untopo report — page {page}"
+  },
+  "VoiceShowcase": {
+    "title": "Simpler writing",
+    "description": "Dictate your report aloud or type it manually. Untopo can then automatically correct and polish your text without changing the meaning of your observations."
+  },
+  "CreatorShowcase": {
+    "title": "Built for specialists",
+    "description": "Untopo was developed with field professionals to create a simple, fast, and effective experience for writing your reports — on phone and computer alike.",
+    "desktopAlt": "Untopo report creator — desktop view",
+    "mobileAlt": "Untopo report creator — mobile view"
+  },
+  "V2Features": {
+    "report": {
+      "title": "Report creator",
+      "description": "Create leak detection reports quickly with a fluid interface"
+    },
+    "pdf": {
+      "title": "Professional PDF generation",
+      "description": "Automatically generate clean, structured PDF reports ready to send to your clients or insurers."
+    },
+    "history": {
+      "title": "Intervention history",
+      "description": "Easily find your past reports and the full history of your interventions."
+    },
+    "contacts": {
+      "title": "Contacts and places directory",
+      "description": "Addresses and contacts linked to your reports are automatically saved in your Untopo directory."
+    },
+    "palette": {
+      "title": "Report customization",
+      "description": "Add your logo and automatically brand your PDF reports with your company colors."
+    },
+    "mail": {
+      "title": "Send reports by email",
+      "description": "Send your reports directly from Untopo with a professional layout that includes your logo."
+    }
+  },
+  "FeaturesPage": {
+    "metaTitle": "Features",
+    "metaDescription": "Voice dictation, annotated photos, professional PDF, and contacts directory — discover Untopo for leak detection specialists.",
+    "eyebrow": "Features",
+    "title": "A field assistant, not management software",
+    "description": "Untopo focuses on one mission: saving you time on every intervention report, with as little friction as possible.",
+    "workflow": {
+      "1": {
+        "title": "Start the intervention",
+        "text": "Create a report in one tap. The app keeps the draft active so you can continue later."
+      },
+      "2": {
+        "title": "Describe and photograph",
+        "text": "Dictate your findings, capture damaged areas, and annotate visuals on site."
+      },
+      "3": {
+        "title": "Validate and send",
+        "text": "Generate the PDF, review it, and share it with the client or insurer."
+      }
+    },
+    "notTitle": "What Untopo is not",
+    "notDescription": "No heavy CRM, no endless admin flows, no multi-day training. Untopo stays a fast, reliable field tool."
+  },
+  "Features": {
+    "mic": {
+      "title": "Structured voice dictation",
+      "description": "Describe the intervention out loud. Untopo transcribes and organizes the content into a clear report — no endless forms."
+    },
+    "camera": {
+      "title": "Photos & annotations",
+      "description": "Capture damaged areas, annotate on site, and link each visual to the right place in the report."
+    },
+    "file": {
+      "title": "Professional PDF",
+      "description": "Generate an export ready to send to the client or insurer, with your logo and contact details."
+    },
+    "contacts": {
+      "title": "Contacts & places directory",
+      "description": "Find clients, addresses, and intervention history without re-entering the same information."
+    },
+    "mobile": {
+      "title": "Built for the field",
+      "description": "Mobile-first interface, usable one-handed — even with gloves or in the rain. Install the app on your home screen."
+    },
+    "sync": {
+      "title": "Offline then sync",
+      "description": "Work without network in basements or under parking. Your drafts stay on the device until sync."
+    }
+  },
+  "Pricing": {
+    "metaTitle": "Pricing",
+    "metaDescription": "Untopo is currently free during its launch phase. See the pricing planned for the official release.",
+    "eyebrow": "Pricing",
+    "title": "Launch phase: free access until the official release",
+    "description": "Untopo is currently available for free during its launch phase. The prices below reflect the plan planned for the official launch.",
+    "billingAria": "Billing period",
+    "yearly": "Yearly",
+    "monthly": "Monthly",
+    "yearlyBadge": "2 months free",
+    "yearlyHint": "Save 2 months compared to monthly billing (about {price} €/month).",
+    "monthlyHint": "Switch to yearly to save the equivalent of 2 months.",
+    "free": "Free",
+    "freeSubtitle": "Try the app before subscribing to Pro",
+    "reportsIncluded": "{count} reports included",
+    "noCard": "No credit card required",
+    "pro": "Untopo Pro",
+    "perYear": "/ year",
+    "perMonth": "/ month",
+    "launchFree": "free during launch phase",
+    "launchPriceNote": "Price planned for official release · excl. VAT",
+    "yearlyPriceNote": "About {price} €/month · excl. VAT",
+    "monthlyPriceNote": "Excl. VAT · indicative pricing",
+    "unlimited": "Unlimited reports",
+    "yearlySub": "Yearly subscription — 2 months free",
+    "monthlySub": "Monthly subscription, no commitment",
+    "startFree": "Start for free",
+    "tryNow": "Try now",
+    "subscribeYearly": "Subscribe yearly",
+    "subscribeMonthly": "Subscribe monthly",
+    "planFeatures": {
+      "pdf": "Professional PDF exports",
+      "edit": "Report editing",
+      "history": "Full history",
+      "contacts": "Contacts & places directory",
+      "voice": "Voice dictation and photo capture"
+    }
+  },
+  "Faq": {
+    "metaTitle": "FAQ",
+    "metaDescription": "Frequently asked questions about Untopo: access, Pro plan, offline use, and data security.",
+    "eyebrow": "FAQ",
+    "title": "Frequently asked questions",
+    "description": "Everything you need to know before using Untopo on your next interventions.",
+    "items": [
+      {
+        "question": "Who is Untopo for?",
+        "answer": "Untopo is designed for leak detection professionals, whether they work alone or in a team. The app simplifies creating, managing, and sending reports directly from the field."
+      },
+      {
+        "question": "Does Untopo work on phone and computer?",
+        "answer": "Yes. Untopo works on smartphone, tablet, and computer, so it can support you both on site and at the office."
+      },
+      {
+        "question": "Does the app work without network or 4G?",
+        "answer": "Yes. You can continue your intervention offline: complete a report, add information, and take photos. As soon as the connection is restored, sync happens automatically."
+      },
+      {
+        "question": "Can I start a report on site and finish it at the office?",
+        "answer": "Yes. Start on site, continue at the office on another device: your drafts sync automatically as soon as the connection is restored."
+      },
+      {
+        "question": "Do I need to install software?",
+        "answer": "No. Untopo runs directly in your browser, with no installation. Just sign in to your account."
+      },
+      {
+        "question": "Can I customize my reports with my logo?",
+        "answer": "Yes. Add your logo to automatically brand your PDF reports and emails with your company colors."
+      },
+      {
+        "question": "Can I send my reports directly from Untopo?",
+        "answer": "Yes. Send your reports directly from Untopo with a professional email ready to send."
+      },
+      {
+        "question": "Are reports suitable for insurers and property managers?",
+        "answer": "Yes. Reports generated by Untopo include the information generally expected for an intervention: requester identification, leak origin, affected areas, measurement device readings, and photos in a professional layout."
+      },
+      {
+        "question": "Can I edit a report after creating it?",
+        "answer": "Yes. You can edit, complete, and reopen a report at any time — including after finalization, and from another device once synced."
+      },
+      {
+        "question": "Are my past reports kept?",
+        "answer": "Yes. You can access your intervention history at any time."
+      },
+      {
+        "question": "Is my data secure?",
+        "answer": "Yes. Your reports and photos are stored securely and are only accessible to you."
+      }
+    ]
+  },
+  "Contact": {
+    "metaTitle": "Contact",
+    "metaDescription": "Contact the Untopo team for a question, partnership, or suggestion.",
+    "eyebrow": "Contact",
+    "title": "Have a question? Write to us.",
+    "description": "Support, demo, partnership, or field feedback — we read every message.",
+    "email": "Email",
+    "application": "Application",
+    "appHint": "For a technical issue in the app, mention your device and the last action you took.",
+    "thanks": "Thank you for your message.",
+    "thanksHint": "We will reply to the address you provided as soon as possible.",
+    "name": "Name",
+    "namePlaceholder": "John Smith",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@company.com",
+    "reason": "Reason",
+    "message": "Message",
+    "messagePlaceholder": "Describe your need or question...",
+    "submit": "Send message",
+    "formHint": "The form opens your email client with a prefilled message. You can also write to us directly at",
+    "reasons": {
+      "info": "Information request",
+      "issue": "Report an issue",
+      "suggestion": "Improvement suggestion",
+      "partnership": "Partnership / press"
+    },
+    "mailName": "Name",
+    "mailEmail": "Email"
+  },
+  "CtaBanner": {
+    "title": "Ready for your next intervention?",
+    "notice": "Untopo is currently available for free during its launch phase.",
+    "startFree": "Start for free",
+    "seePricing": "See pricing"
+  },
+  "Legal": {
+    "eyebrow": "Legal",
+    "legalNoticeTitle": "Legal notice",
+    "termsTitle": "Terms of use",
+    "privacyTitle": "Privacy policy",
+    "dataRetentionTitle": "Data retention policy",
+    "launchPhaseTitle": "Launch phase"
+  },
+  "HeroAnimation": {
+    "ariaLabel": "Animation: creating and sending a PDF report in Untopo",
+    "report": "Report",
+    "draft": "Draft",
+    "finalized": "Finalized",
+    "findingsByZone": "Findings by zone",
+    "zoneA": "Zone A — Entrance hall",
+    "zoneB": "Zone B — Technical basement",
+    "methods": "Methods",
+    "expertOpinion": "Expert opinion",
+    "generatePdf": "Generate PDF",
+    "siteName": "Pine Residences",
+    "viewPdf": "View PDF",
+    "download": "Download",
+    "send": "Send",
+    "sentSuccess": "Report sent by email.",
+    "generatingTitle": "Generating PDF",
+    "stepPrepare": "Preparing the report…",
+    "stepPhotos": "Uploading photos…",
+    "stepCreate": "Creating the PDF…",
+    "stepFinalize": "Finalizing…",
+    "stepReady": "PDF ready"
+  }
+}

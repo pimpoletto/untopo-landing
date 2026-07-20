@@ -1,0 +1,300 @@
+{
+  "Meta": {
+    "title": "Untopo: Rapports de détection de fuites.",
+    "description": "Créez vos rapports de détection plus rapidement. Untopo simplifie la création et l'envoi de rapports professionnels de détection de fuite.",
+    "ogLocale": "fr_BE"
+  },
+  "Nav": {
+    "pricing": "Tarifs",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "mainAria": "Navigation principale",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "menu": "Menu",
+    "login": "Connexion",
+    "startFree": "Commencer gratuitement",
+    "dashboard": "Tableau de bord",
+    "homeAria": "accueil"
+  },
+  "Footer": {
+    "product": "Produit",
+    "legal": "Légal",
+    "contact": "Contact",
+    "openApp": "Ouvrir l'application",
+    "rights": "Tous droits réservés.",
+    "legalNotice": "Mentions légales",
+    "terms": "CGU",
+    "privacy": "Confidentialité",
+    "dataRetention": "Rétention des données",
+    "launchPhase": "Phase de lancement"
+  },
+  "LanguageSwitcher": {
+    "label": "Langue",
+    "fr": "FR",
+    "en": "EN",
+    "frName": "Français",
+    "enName": "English"
+  },
+  "Home": {
+    "title": "Passez moins de <gradient>temps</gradient> sur vos rapports",
+    "subtitle": "Créez, personnalisez et envoyez vos rapports de détection de fuites directement depuis votre ordinateur ou votre téléphone.",
+    "cta": "Commencer gratuitement",
+    "trustAria": "Points clés",
+    "trustNoInstall": "Sans installation",
+    "trustDevices": "Disponible sur ordinateur et mobile",
+    "trustTrial": "{count} rapports gratuits à l'inscription",
+    "featuresTitle": "Tout ce dont vous avez besoin pour vos rapports",
+    "featuresSubtitle": "Créer, personnaliser, exporter et envoyer vos rapports de détection de fuite depuis une seule interface.",
+    "ctaTitle": "Profitez de l'accès gratuit pendant la phase de lancement",
+    "ctaSubtitle": "Créez, personnalisez et envoyez vos rapports dès maintenant, puis découvrez la formule prévue pour la sortie officielle."
+  },
+  "PdfShowcase": {
+    "title": "Rapport PDF professionnels",
+    "description": "Untopo transforme en un clic vos interventions en rapports PDF clairs, structurés et prêts à transmettre — directement à vos clients ou à leur assurance.",
+    "filename": "rapport-detection.pdf",
+    "pageAlt": "Rapport Untopo — page {page}"
+  },
+  "VoiceShowcase": {
+    "title": "Une rédaction plus simple",
+    "description": "Dictez votre rapport oralement ou rédigez-le manuellement. Untopo peut ensuite corriger et peaufiner automatiquement votre texte, sans modifier le sens de vos observations."
+  },
+  "CreatorShowcase": {
+    "title": "Pensé pour les spécialistes",
+    "description": "Untopo a été développé avec des professionnels du terrain afin de créer une expérience simple, rapide et efficace pour rédiger vos rapports, aussi bien sur téléphone que sur ordinateur.",
+    "desktopAlt": "Créateur de rapport Untopo — vue ordinateur",
+    "mobileAlt": "Créateur de rapport Untopo — vue mobile"
+  },
+  "V2Features": {
+    "report": {
+      "title": "Créateur de rapports",
+      "description": "Créez des rapports de détection de fuite rapidement grâce à une interface fluide"
+    },
+    "pdf": {
+      "title": "Génération PDF professionnelle",
+      "description": "Générez automatiquement des rapports PDF propres, structurés et prêts à être envoyés à vos clients ou assurances."
+    },
+    "history": {
+      "title": "Historique des interventions",
+      "description": "Retrouvez facilement vos anciens rapports ainsi que l'historique complet de vos interventions."
+    },
+    "contacts": {
+      "title": "Carnet de contacts et lieux",
+      "description": "Les adresses et contacts liés à vos rapports sont automatiquement enregistrés dans votre carnet Untopo."
+    },
+    "palette": {
+      "title": "Personnalisation de vos rapports",
+      "description": "Ajoutez votre logo et personnalisez automatiquement vos rapports PDF aux couleurs de votre entreprise."
+    },
+    "mail": {
+      "title": "Envoi des rapports par e-mail",
+      "description": "Envoyez vos rapports directement depuis Untopo avec une mise en page professionnelle intégrant votre logo."
+    }
+  },
+  "FeaturesPage": {
+    "metaTitle": "Fonctionnalités",
+    "metaDescription": "Dictée vocale, photos annotées, PDF professionnel et carnet contacts — découvrez Untopo pour les experts fuites.",
+    "eyebrow": "Fonctionnalités",
+    "title": "Un assistant terrain, pas un logiciel de gestion",
+    "description": "Untopo se concentre sur une seule mission : vous faire gagner du temps sur chaque rapport d'intervention, avec un minimum de manipulation.",
+    "workflow": {
+      "1": {
+        "title": "Démarrez l'intervention",
+        "text": "Créez un rapport en un geste. L'app garde le brouillon actif pour reprendre plus tard."
+      },
+      "2": {
+        "title": "Décrivez et photographiez",
+        "text": "Dictez vos constats, capturez les zones sinistrées et annotez les visuels sur place."
+      },
+      "3": {
+        "title": "Validez et envoyez",
+        "text": "Générez le PDF, vérifiez le rendu et partagez-le au client ou à l'assureur."
+      }
+    },
+    "notTitle": "Ce que Untopo n'est pas",
+    "notDescription": "Pas de CRM lourd, pas de parcours administratif à rallonge, pas de formation de plusieurs jours. Untopo reste un outil de terrain, rapide et fiable."
+  },
+  "Features": {
+    "mic": {
+      "title": "Dictée vocale structurée",
+      "description": "Décrivez l'intervention à voix haute. Untopo transcrit et organise le contenu dans un rapport clair, sans formulaires interminables."
+    },
+    "camera": {
+      "title": "Photos & annotations",
+      "description": "Capturez les zones sinistrées, annotez sur place et associez chaque visuel au bon endroit du rapport."
+    },
+    "file": {
+      "title": "PDF professionnel",
+      "description": "Générez un export prêt à envoyer au client ou à l'assureur, avec votre logo et vos coordonnées."
+    },
+    "contacts": {
+      "title": "Carnet contacts & lieux",
+      "description": "Retrouvez clients, adresses et historique d'interventions sans ressaisir les mêmes informations."
+    },
+    "mobile": {
+      "title": "Conçu pour le terrain",
+      "description": "Interface mobile-first, utilisable à une main, même avec des gants ou sous la pluie. Installez l'app sur l'écran d'accueil."
+    },
+    "sync": {
+      "title": "Hors ligne puis synchro",
+      "description": "Travaillez sans réseau en cave ou sous parking. Vos brouillons restent sur l'appareil jusqu'à la synchronisation."
+    }
+  },
+  "Pricing": {
+    "metaTitle": "Tarifs",
+    "metaDescription": "Untopo est actuellement gratuit pendant sa phase de lancement. Découvrez la grille tarifaire prévue pour la sortie officielle.",
+    "eyebrow": "Tarifs",
+    "title": "Phase de lancement : accès gratuit jusqu'à la sortie officielle",
+    "description": "Untopo est actuellement accessible gratuitement pendant sa phase de lancement. Les tarifs ci-dessous correspondent à la formule prévue lors du lancement officiel.",
+    "billingAria": "Période de facturation",
+    "yearly": "Annuel",
+    "monthly": "Mensuel",
+    "yearlyBadge": "2 mois offerts",
+    "yearlyHint": "Économisez 2 mois par rapport au tarif mensuel (soit {price} €/mois).",
+    "monthlyHint": "Passez à l'annuel pour économiser l'équivalent de 2 mois.",
+    "free": "Gratuit",
+    "freeSubtitle": "Pour tester l'app avant de souscrire à Pro",
+    "reportsIncluded": "{count} rapports inclus",
+    "noCard": "Sans carte bancaire",
+    "pro": "Untopo Pro",
+    "perYear": "/ an",
+    "perMonth": "/ mois",
+    "launchFree": "gratuit phase de lancement",
+    "launchPriceNote": "Tarif prévu à la sortie officielle · hors TVA",
+    "yearlyPriceNote": "Soit {price} €/mois · hors TVA",
+    "monthlyPriceNote": "Hors TVA · tarifs indicatifs",
+    "unlimited": "Rapports illimités",
+    "yearlySub": "Abonnement annuel — 2 mois offerts",
+    "monthlySub": "Abonnement mensuel, sans engagement",
+    "startFree": "Commencer gratuitement",
+    "tryNow": "Essayer maintenant",
+    "subscribeYearly": "S'abonner à l'année",
+    "subscribeMonthly": "S'abonner au mois",
+    "planFeatures": {
+      "pdf": "Exports PDF professionnels",
+      "edit": "Modification de rapports",
+      "history": "Historique complet",
+      "contacts": "Carnet de contacts & lieux",
+      "voice": "Dictée vocale et ajout de photos"
+    }
+  },
+  "Faq": {
+    "metaTitle": "FAQ",
+    "metaDescription": "Questions fréquentes sur Untopo : accès, offre Pro, utilisation hors ligne et sécurité des données.",
+    "eyebrow": "FAQ",
+    "title": "Questions fréquentes",
+    "description": "Tout ce qu'il faut savoir avant d'utiliser Untopo sur vos prochaines interventions.",
+    "items": [
+      {
+        "question": "À qui s'adresse Untopo ?",
+        "answer": "Untopo est conçu pour les professionnels de la détection de fuites, qu'ils travaillent seuls ou en équipe. L'application simplifie la création, la gestion et l'envoi de rapports directement depuis le terrain."
+      },
+      {
+        "question": "Untopo fonctionne-t-il sur téléphone et ordinateur ?",
+        "answer": "Oui. Untopo fonctionne sur smartphone, tablette et ordinateur, pour vous accompagner aussi bien sur le terrain qu'au bureau."
+      },
+      {
+        "question": "Est-ce que l'application fonctionne sans réseau ou sans 4G ?",
+        "answer": "Oui. Vous pouvez continuer votre intervention sans connexion : compléter un rapport, ajouter des informations et prendre des photos. Dès que la connexion est rétablie, la synchronisation se fait automatiquement."
+      },
+      {
+        "question": "Puis-je commencer un rapport sur le terrain et le terminer au bureau ?",
+        "answer": "Oui. Commencez sur le terrain, reprenez au bureau sur un autre appareil : vos brouillons se synchronisent automatiquement dès que la connexion est rétablie."
+      },
+      {
+        "question": "Faut-il installer un logiciel ?",
+        "answer": "Non. Untopo fonctionne directement dans votre navigateur, sans installation. Il vous suffit de vous connecter à votre compte."
+      },
+      {
+        "question": "Puis-je personnaliser mes rapports avec mon logo ?",
+        "answer": "Oui. Ajoutez votre logo pour personnaliser automatiquement vos rapports PDF et vos e-mails aux couleurs de votre entreprise."
+      },
+      {
+        "question": "Puis-je envoyer mes rapports directement depuis Untopo ?",
+        "answer": "Oui. Envoyez vos rapports directement depuis Untopo avec un e-mail professionnel prêt à être envoyé."
+      },
+      {
+        "question": "Les rapports sont-ils adaptés aux assurances et aux syndics ?",
+        "answer": "Oui. Les rapports générés par Untopo présentent les informations généralement attendues lors d'une intervention : identification du demandeur, origine de la fuite, zones affectées, relevés des appareils de mesure et photos intégrées dans une mise en page professionnelle."
+      },
+      {
+        "question": "Puis-je modifier un rapport après sa création ?",
+        "answer": "Oui. Vous pouvez modifier, compléter et reprendre un rapport à tout moment — y compris après sa finalisation, et depuis un autre appareil une fois synchronisé."
+      },
+      {
+        "question": "Mes anciens rapports sont-ils conservés ?",
+        "answer": "Oui. Retrouvez à tout moment l'historique de vos interventions."
+      },
+      {
+        "question": "Les données sont-elles sécurisées ?",
+        "answer": "Oui. Vos rapports et vos photos sont stockés de manière sécurisée et ne sont accessibles qu'à vous."
+      }
+    ]
+  },
+  "Contact": {
+    "metaTitle": "Contact",
+    "metaDescription": "Contactez l'équipe Untopo pour une question, un partenariat ou une suggestion.",
+    "eyebrow": "Contact",
+    "title": "Une question ? Écrivez-nous.",
+    "description": "Support, démo, partenariat ou retour terrain — nous lisons chaque message.",
+    "email": "Email",
+    "application": "Application",
+    "appHint": "Pour un problème technique dans l'app, précisez votre appareil et la dernière action effectuée.",
+    "thanks": "Merci pour votre message.",
+    "thanksHint": "Nous vous répondrons à l'adresse indiquée dès que possible.",
+    "name": "Nom",
+    "namePlaceholder": "Jean Dupont",
+    "emailLabel": "Email",
+    "emailPlaceholder": "vous@entreprise.be",
+    "reason": "Motif",
+    "message": "Message",
+    "messagePlaceholder": "Décrivez votre besoin ou votre question...",
+    "submit": "Envoyer le message",
+    "formHint": "Le formulaire ouvre votre client mail avec le message prérempli. Vous pouvez aussi nous écrire directement à",
+    "reasons": {
+      "info": "Demande d'information",
+      "issue": "Signaler un problème",
+      "suggestion": "Suggestion d'amélioration",
+      "partnership": "Partenariat / presse"
+    },
+    "mailName": "Nom",
+    "mailEmail": "Email"
+  },
+  "CtaBanner": {
+    "title": "Prêt pour votre prochaine intervention ?",
+    "notice": "Untopo est actuellement accessible gratuitement pendant sa phase de lancement.",
+    "startFree": "Commencer gratuitement",
+    "seePricing": "Voir les tarifs"
+  },
+  "Legal": {
+    "eyebrow": "Légal",
+    "legalNoticeTitle": "Mentions légales",
+    "termsTitle": "Conditions générales d'utilisation",
+    "privacyTitle": "Politique de confidentialité",
+    "dataRetentionTitle": "Politique de rétention des données",
+    "launchPhaseTitle": "Phase de lancement"
+  },
+  "HeroAnimation": {
+    "ariaLabel": "Animation : création et envoi d'un rapport PDF dans Untopo",
+    "report": "Rapport",
+    "draft": "Brouillon",
+    "finalized": "Finalisé",
+    "findingsByZone": "Constatations par zones",
+    "zoneA": "Zone A — Hall d'entrée",
+    "zoneB": "Zone B — Cave technique",
+    "methods": "Méthodes",
+    "expertOpinion": "Avis expert",
+    "generatePdf": "Générer le PDF",
+    "siteName": "Résidence Les Pins",
+    "viewPdf": "Voir PDF",
+    "download": "Télécharger",
+    "send": "Envoyer",
+    "sentSuccess": "Rapport envoyé par e-mail.",
+    "generatingTitle": "Génération du PDF",
+    "stepPrepare": "Préparation du rapport…",
+    "stepPhotos": "Envoi des photos…",
+    "stepCreate": "Création du PDF…",
+    "stepFinalize": "Finalisation…",
+    "stepReady": "PDF prêt"
+  }
+}

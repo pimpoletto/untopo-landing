@@ -1,16 +1,20 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 import { Logo } from "@/components/brand/logo";
+import { LanguageSwitcher } from "@/components/language-switcher";
 import { useLandingThemeOptional } from "@/components/landing/landing-theme-provider";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { useAppSession } from "@/hooks/use-app-session";
-import { navLinks, siteConfig } from "@/lib/site";
+import { Link, usePathname } from "@/i18n/navigation";
+import { navHrefs } from "@/lib/site";
+import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
+
+const navLabelKeys = ["pricing", "faq", "contact"] as const;
 
 function HeaderAuthActions({
   isLandingDark,
@@ -25,6 +29,8 @@ function HeaderAuthActions({
   className?: string;
   hideWhenLoggedIn?: boolean;
 }) {
+  const t = useTranslations("Nav");
+
   if (hideWhenLoggedIn && loggedIn) return null;
 
   if (loggedIn) {
@@ -37,7 +43,7 @@ function HeaderAuthActions({
           className="bg-[var(--cta-primary)] !text-white shadow-sm hover:bg-[var(--cta-primary-hover)]"
           onClick={onNavigate}
         >
-          Tableau de bord
+          {t("dashboard")}
         </Button>
       </div>
     );
@@ -58,7 +64,7 @@ function HeaderAuthActions({
         )}
         onClick={onNavigate}
       >
-        Connexion
+        {t("login")}
       </Button>
       <Button
         href={siteConfig.appUrl}
@@ -68,13 +74,14 @@ function HeaderAuthActions({
         className="bg-[var(--cta-primary)] !text-white shadow-sm hover:bg-[var(--cta-primary-hover)]"
         onClick={onNavigate}
       >
-        Commencer gratuitement
+        {t("startFree")}
       </Button>
     </div>
   );
 }
 
 export function SiteHeader() {
+  const t = useTranslations("Nav");
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const loggedIn = useAppSession();
@@ -92,14 +99,14 @@ export function SiteHeader() {
       <Container className="flex h-16 items-center justify-between gap-4">
         <Logo theme={isLandingDark ? "dark" : "light"} />
 
-        <nav className="hidden items-center gap-1 md:flex" aria-label="Navigation principale">
-          {navLinks.map((link) => (
+        <nav className="hidden items-center gap-1 md:flex" aria-label={t("mainAria")}>
+          {navHrefs.map((href, index) => (
             <Link
-              key={link.href}
-              href={link.href}
+              key={href}
+              href={href}
               className={cn(
                 "rounded-lg px-3 py-2 text-sm font-medium transition-colors",
-                pathname === link.href
+                pathname === href
                   ? isLandingDark
                     ? "bg-white/10 text-white"
                     : "bg-primary-soft text-primary-strong"
@@ -108,18 +115,22 @@ export function SiteHeader() {
                     : "text-muted-foreground hover:text-foreground",
               )}
             >
-              {link.label}
+              {t(navLabelKeys[index])}
             </Link>
           ))}
         </nav>
 
-        <HeaderAuthActions
-          isLandingDark={isLandingDark}
-          loggedIn={loggedIn}
-          className="hidden items-center gap-2 md:flex"
-        />
+        <div className="hidden items-center gap-3 md:flex">
+          <LanguageSwitcher isLandingDark={isLandingDark} />
+          <HeaderAuthActions
+            isLandingDark={isLandingDark}
+            loggedIn={loggedIn}
+            className="flex items-center gap-2"
+          />
+        </div>
 
         <div className="flex items-center gap-2 md:hidden">
+          <LanguageSwitcher isLandingDark={isLandingDark} />
           {loggedIn ? (
             <Button
               href={siteConfig.appUrl}
@@ -127,7 +138,7 @@ export function SiteHeader() {
               size="sm"
               className="bg-[var(--cta-primary)] !text-white shadow-sm hover:bg-[var(--cta-primary-hover)]"
             >
-              Tableau de bord
+              {t("dashboard")}
             </Button>
           ) : null}
           <button
@@ -138,10 +149,10 @@ export function SiteHeader() {
             )}
             aria-expanded={open}
             aria-controls="mobile-nav"
-            aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-label={open ? t("closeMenu") : t("openMenu")}
             onClick={() => setOpen((v) => !v)}
           >
-            <span className="sr-only">Menu</span>
+            <span className="sr-only">{t("menu")}</span>
             <svg viewBox="0 0 24 24" className="size-5" aria-hidden>
               {open ? (
                 <path d="M6 6l12 12M18 6 6 18" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
@@ -162,14 +173,14 @@ export function SiteHeader() {
           )}
         >
           <Container className="flex flex-col gap-1 py-3">
-            {navLinks.map((link) => (
+            {navHrefs.map((href, index) => (
               <Link
-                key={link.href}
-                href={link.href}
+                key={href}
+                href={href}
                 onClick={() => setOpen(false)}
                 className={cn(
                   "rounded-lg px-3 py-3 text-sm font-medium",
-                  pathname === link.href
+                  pathname === href
                     ? isLandingDark
                       ? "bg-white/10 text-white"
                       : "bg-primary-soft text-primary-strong"
@@ -178,7 +189,7 @@ export function SiteHeader() {
                       : "text-foreground",
                 )}
               >
-                {link.label}
+                {t(navLabelKeys[index])}
               </Link>
             ))}
             <HeaderAuthActions

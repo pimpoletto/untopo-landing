@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 import { IconCheck } from "@/components/icons";
@@ -12,26 +13,19 @@ import {
 } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
-const planFeatures = [
-  "Exports PDF professionnels",
-  "Modification de rapports",
-  "Historique complet",
-  "Carnet de contacts & lieux",
-  "Dictée vocale et ajout de photos",
-] as const;
+const planFeatureKeys = ["pdf", "edit", "history", "contacts", "voice"] as const;
 
 export function PricingCards({ launchMode = false }: { launchMode?: boolean }) {
+  const t = useTranslations("Pricing");
   const [yearly, setYearly] = useState(true);
   const price = yearly ? PRO_PRICE_ANNUAL_EUR : PRO_PRICE_MONTHLY_EUR;
-  const period = yearly ? "/ an" : "/ mois";
-  const monthlyEquivalent = (PRO_PRICE_ANNUAL_EUR / 12)
-    .toFixed(2)
-    .replace(".", ",");
+  const period = yearly ? t("perYear") : t("perMonth");
+  const monthlyEquivalent = (PRO_PRICE_ANNUAL_EUR / 12).toFixed(2).replace(".", ",");
 
   const billingOptions = [
-    { id: true, label: "Annuel", badge: "2 mois offerts" },
-    { id: false, label: "Mensuel" },
-  ] as const;
+    { id: true as const, label: t("yearly"), badge: t("yearlyBadge") },
+    { id: false as const, label: t("monthly") },
+  ];
 
   return (
     <div className="space-y-8">
@@ -39,7 +33,7 @@ export function PricingCards({ launchMode = false }: { launchMode?: boolean }) {
         <div
           className="inline-flex rounded-xl border border-border bg-muted/50 p-1"
           role="tablist"
-          aria-label="Période de facturation"
+          aria-label={t("billingAria")}
         >
           {billingOptions.map((option) => (
             <button
@@ -74,30 +68,26 @@ export function PricingCards({ launchMode = false }: { launchMode?: boolean }) {
           ))}
         </div>
         <p className="text-center text-sm text-muted-foreground">
-          {yearly
-            ? `Économisez 2 mois par rapport au tarif mensuel (soit ${monthlyEquivalent} €/mois).`
-            : "Passez à l'annuel pour économiser l'équivalent de 2 mois."}
+          {yearly ? t("yearlyHint", { price: monthlyEquivalent }) : t("monthlyHint")}
         </p>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-2">
         <div className="flex flex-col rounded-[calc(var(--radius)+2px)] border border-border bg-card p-6 sm:p-8">
-          <p className="text-sm font-medium text-muted-foreground">Gratuit</p>
+          <p className="text-sm font-medium text-muted-foreground">{t("free")}</p>
           <p className="mt-3 text-4xl font-semibold tracking-tight">0 €</p>
-          <p className="mt-1 text-sm text-muted-foreground">
-            Pour tester l&apos;app avant de souscrire à Pro
-          </p>
+          <p className="mt-1 text-sm text-muted-foreground">{t("freeSubtitle")}</p>
           <div className="mt-4 rounded-xl border border-border bg-muted/40 px-4 py-3 text-sm">
             <p className="font-medium text-foreground">
-              {TRIAL_REPORTS} rapports inclus
+              {t("reportsIncluded", { count: TRIAL_REPORTS })}
             </p>
-            <p className="mt-1 text-muted-foreground">Sans carte bancaire</p>
+            <p className="mt-1 text-muted-foreground">{t("noCard")}</p>
           </div>
           <ul className="mt-6 flex-1 space-y-3">
-            {planFeatures.map((feature) => (
-              <li key={feature} className="flex items-start gap-2.5 text-sm">
+            {planFeatureKeys.map((key) => (
+              <li key={key} className="flex items-start gap-2.5 text-sm">
                 <IconCheck className="mt-0.5 text-positive" />
-                <span>{feature}</span>
+                <span>{t(`planFeatures.${key}`)}</span>
               </li>
             ))}
           </ul>
@@ -107,23 +97,21 @@ export function PricingCards({ launchMode = false }: { launchMode?: boolean }) {
             external
             className="mt-8 w-full bg-[var(--cta-primary)] !text-white shadow-sm hover:bg-[var(--cta-primary-hover)]"
           >
-            Commencer gratuitement
+            {t("startFree")}
           </Button>
         </div>
 
         <div className="brand-soft-tile relative flex flex-col overflow-hidden rounded-[calc(var(--radius)+2px)] p-6 sm:p-8">
           <div className="hero-glow pointer-events-none absolute inset-0" aria-hidden />
           <div className="relative flex flex-1 flex-col">
-            <p className="text-sm font-medium text-primary-strong">Untopo Pro</p>
+            <p className="text-sm font-medium text-primary-strong">{t("pro")}</p>
             {launchMode ? (
               <div className="mt-3 flex flex-wrap items-baseline gap-x-3 gap-y-1">
                 <p className="text-4xl font-semibold tracking-tight text-muted-foreground line-through decoration-muted-foreground/70">
                   {price} €
                   <span className="text-base font-normal">{period}</span>
                 </p>
-                <span className="text-sm font-semibold text-positive">
-                  gratuit phase de lancement
-                </span>
+                <span className="text-sm font-semibold text-positive">{t("launchFree")}</span>
               </div>
             ) : (
               <p className="mt-3 text-4xl font-semibold tracking-tight">
@@ -133,24 +121,22 @@ export function PricingCards({ launchMode = false }: { launchMode?: boolean }) {
             )}
             <p className="mt-1 text-sm text-muted-foreground">
               {launchMode
-                ? "Tarif prévu à la sortie officielle · hors TVA"
+                ? t("launchPriceNote")
                 : yearly
-                  ? `Soit ${monthlyEquivalent} €/mois · hors TVA`
-                  : "Hors TVA · tarifs indicatifs"}
+                  ? t("yearlyPriceNote", { price: monthlyEquivalent })
+                  : t("monthlyPriceNote")}
             </p>
             <div className="mt-4 rounded-xl border border-primary/20 bg-primary/5 px-4 py-3 text-sm">
-              <p className="font-medium text-foreground">Rapports illimités</p>
+              <p className="font-medium text-foreground">{t("unlimited")}</p>
               <p className="mt-1 text-muted-foreground">
-                {yearly
-                  ? "Abonnement annuel — 2 mois offerts"
-                  : "Abonnement mensuel, sans engagement"}
+                {yearly ? t("yearlySub") : t("monthlySub")}
               </p>
             </div>
             <ul className="mt-6 flex-1 space-y-3">
-              {planFeatures.map((feature) => (
-                <li key={feature} className="flex items-start gap-2.5 text-sm">
+              {planFeatureKeys.map((key) => (
+                <li key={key} className="flex items-start gap-2.5 text-sm">
                   <IconCheck className="mt-0.5 text-positive" />
-                  <span>{feature}</span>
+                  <span>{t(`planFeatures.${key}`)}</span>
                 </li>
               ))}
             </ul>
@@ -160,7 +146,11 @@ export function PricingCards({ launchMode = false }: { launchMode?: boolean }) {
               external
               className="mt-8 w-full bg-[var(--cta-primary)] !text-white shadow-sm hover:bg-[var(--cta-primary-hover)]"
             >
-              {launchMode ? "Essayer maintenant" : yearly ? "S'abonner à l'année" : "S'abonner au mois"}
+              {launchMode
+                ? t("tryNow")
+                : yearly
+                  ? t("subscribeYearly")
+                  : t("subscribeMonthly")}
             </Button>
           </div>
         </div>

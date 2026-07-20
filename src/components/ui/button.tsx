@@ -1,9 +1,9 @@
-import Link from "next/link";
-
+import { Link } from "@/i18n/navigation";
+import type { Pathnames } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 
 type ButtonProps = {
-  href?: string;
+  href?: Pathnames | (string & {});
   variant?: "primary" | "secondary" | "ghost";
   size?: "sm" | "md" | "lg";
   className?: string;
@@ -43,12 +43,24 @@ export function Button({
 
   if (href) {
     const { onClick } = props;
+    if (external || href.startsWith("http") || href.startsWith("mailto:")) {
+      return (
+        <a
+          href={href}
+          className={classes}
+          onClick={onClick as React.MouseEventHandler<HTMLAnchorElement> | undefined}
+          {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+        >
+          {children}
+        </a>
+      );
+    }
+
     return (
       <Link
-        href={href}
+        href={href as Pathnames}
         className={classes}
         onClick={onClick as React.MouseEventHandler<HTMLAnchorElement> | undefined}
-        {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       >
         {children}
       </Link>

@@ -1,16 +1,18 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
-import { faqItems } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 export function FaqList() {
+  const t = useTranslations("Faq");
+  const items = t.raw("items") as { question: string; answer: string }[];
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
     <div className="divide-y divide-border rounded-[calc(var(--radius)+2px)] border border-border bg-card">
-      {faqItems.map((item, index) => {
+      {items.map((item, index) => {
         const open = openIndex === index;
         return (
           <div key={item.question}>

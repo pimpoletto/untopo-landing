@@ -6455,3 +6455,24 @@ html[data-landing-theme="light"] .hero-workflow__chip-label {
     stroke-dashoffset: 0;
   }
 }
+
+@keyframes language-switcher-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.language-switcher__menu {
+  animation: language-switcher-in 140ms ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .language-switcher__menu {
+    animation: none;
+  }
+}

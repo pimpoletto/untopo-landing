@@ -1,28 +1,23 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
-const reasons = [
-  "Demande d'information",
-  "Signaler un problème",
-  "Suggestion d'amélioration",
-  "Partenariat / presse",
-] as const;
+const reasonKeys = ["info", "issue", "suggestion", "partnership"] as const;
 
 export function ContactForm() {
+  const t = useTranslations("Contact");
   const [submitted, setSubmitted] = useState(false);
 
   if (submitted) {
     return (
       <div className="rounded-[calc(var(--radius)+2px)] border border-border bg-card p-6 text-center sm:p-8">
-        <p className="text-lg font-medium">Merci pour votre message.</p>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Nous vous répondrons à l&apos;adresse indiquée dès que possible.
-        </p>
+        <p className="text-lg font-medium">{t("thanks")}</p>
+        <p className="mt-2 text-sm text-muted-foreground">{t("thanksHint")}</p>
       </div>
     );
   }
@@ -35,7 +30,7 @@ export function ContactForm() {
         const data = new FormData(e.currentTarget);
         const subject = encodeURIComponent(`[Untopo] ${String(data.get("reason"))}`);
         const body = encodeURIComponent(
-          `Nom: ${String(data.get("name"))}\nEmail: ${String(data.get("email"))}\n\n${String(data.get("message"))}`,
+          `${t("mailName")}: ${String(data.get("name"))}\n${t("mailEmail")}: ${String(data.get("email"))}\n\n${String(data.get("message"))}`,
         );
         window.location.href = `mailto:${siteConfig.contactEmail}?subject=${subject}&body=${body}`;
         setSubmitted(true);
@@ -43,57 +38,64 @@ export function ContactForm() {
     >
       <div className="grid gap-5 sm:grid-cols-2">
         <label className="block space-y-2 text-sm">
-          <span className="font-medium">Nom</span>
+          <span className="font-medium">{t("name")}</span>
           <input
             required
             name="name"
             className={inputClass}
-            placeholder="Jean Dupont"
+            placeholder={t("namePlaceholder")}
             autoComplete="name"
           />
         </label>
         <label className="block space-y-2 text-sm">
-          <span className="font-medium">Email</span>
+          <span className="font-medium">{t("emailLabel")}</span>
           <input
             required
             type="email"
             name="email"
             className={inputClass}
-            placeholder="vous@entreprise.be"
+            placeholder={t("emailPlaceholder")}
             autoComplete="email"
           />
         </label>
       </div>
 
       <label className="block space-y-2 text-sm">
-        <span className="font-medium">Motif</span>
-        <select required name="reason" className={inputClass} defaultValue={reasons[0]}>
-          {reasons.map((reason) => (
-            <option key={reason} value={reason}>
-              {reason}
+        <span className="font-medium">{t("reason")}</span>
+        <select
+          required
+          name="reason"
+          className={inputClass}
+          defaultValue={t(`reasons.${reasonKeys[0]}`)}
+        >
+          {reasonKeys.map((key) => (
+            <option key={key} value={t(`reasons.${key}`)}>
+              {t(`reasons.${key}`)}
             </option>
           ))}
         </select>
       </label>
 
       <label className="block space-y-2 text-sm">
-        <span className="font-medium">Message</span>
+        <span className="font-medium">{t("message")}</span>
         <textarea
           required
           name="message"
           rows={5}
           className={cn(inputClass, "resize-y min-h-32")}
-          placeholder="Décrivez votre besoin ou votre question..."
+          placeholder={t("messagePlaceholder")}
         />
       </label>
 
       <Button type="submit" size="lg" className="w-full sm:w-auto">
-        Envoyer le message
+        {t("submit")}
       </Button>
       <p className="text-xs text-muted-foreground">
-        Le formulaire ouvre votre client mail avec le message prérempli. Vous pouvez aussi nous
-        écrire directement à{" "}
-        <a href={`mailto:${siteConfig.contactEmail}`} className="text-primary-strong hover:underline">
+        {t("formHint")}{" "}
+        <a
+          href={`mailto:${siteConfig.contactEmail}`}
+          className="text-primary-strong hover:underline"
+        >
           {siteConfig.contactEmail}
         </a>
         .
