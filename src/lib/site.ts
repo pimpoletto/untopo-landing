@@ -112,12 +112,7 @@ export const faqItems = [
   {
     question: "Puis-je modifier un rapport après sa création ?",
     answer:
-      "Oui. Tant qu'un rapport est en brouillon, vous pouvez le modifier, le compléter et le reprendre à tout moment — y compris depuis un autre appareil une fois synchronisé.",
-  },
-  {
-    question: "Combien de temps faut-il pour créer un rapport ?",
-    answer:
-      "Grâce à la dictée vocale, aux photos et à la génération automatique du PDF, vous créez vos rapports en quelques minutes plutôt qu'en repartant de zéro.",
+      "Oui. Vous pouvez modifier, compléter et reprendre un rapport à tout moment — y compris après sa finalisation, et depuis un autre appareil une fois synchronisé.",
   },
   // Compte
   {
@@ -128,10 +123,5 @@ export const faqItems = [
     question: "Les données sont-elles sécurisées ?",
     answer:
       "Oui. Vos rapports et vos photos sont stockés de manière sécurisée et ne sont accessibles qu'à vous.",
-  },
-  {
-    question: "Mes clients verront-ils le logo Untopo ?",
-    answer:
-      "Non. Vos rapports PDF et vos e-mails affichent votre entreprise, avec votre logo et vos coordonnées. Le nom Untopo n'apparaît pas.",
   },
 ] as const;
