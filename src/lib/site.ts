@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Untopo",
-  title: "Untopo — Rapports de détection pour experts fuites",
+  title: "Untopo: Rapports de détection de fuites.",
   description:
-    "Créez vos rapports de détection plus rapidement. Untopo simplifie la création, l'organisation et l'envoi de rapports professionnels de détection de fuite.",
+    "Créez vos rapports de détection plus rapidement. Untopo simplifie la création et l'envoi de rapports professionnels de détection de fuite.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://untopo.com",
   appUrl: process.env.NEXT_PUBLIC_APP_URL ?? "https://app.untopo.com",
   contactEmail: "contact@untopo.com",

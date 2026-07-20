@@ -12,10 +12,6 @@ export function SiteFooter() {
       <Container className="grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-4">
         <div className="space-y-4 sm:col-span-2 lg:col-span-1">
           <Logo />
-          <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">
-            Logiciel de rapport terrain pour experts fuites. Voix, photos, PDF — conçu pour
-            l&apos;intervention réelle.
-          </p>
         </div>
 
         <div>
@@ -62,7 +58,6 @@ export function SiteFooter() {
       <div className="border-t border-border">
         <Container className="flex flex-col gap-2 py-5 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <p>© {year} {siteConfig.name}. Tous droits réservés.</p>
-          <p>Conçu pour les professionnels de la détection de fuites.</p>
         </Container>
       </div>
     </footer>
