@@ -68,37 +68,70 @@ export const features = [
 
 export const faqItems = [
   {
+    question: "À qui s'adresse Untopo ?",
+    answer:
+      "Untopo est conçu pour les professionnels de la détection de fuites, qu'ils travaillent seuls ou en équipe. L'application simplifie la création, la gestion et l'envoi de rapports directement depuis le terrain.",
+  },
+  // Utilisation
+  {
     question: "Untopo fonctionne-t-il sur téléphone et ordinateur ?",
     answer:
-      "Oui. Untopo a été conçu pour fonctionner aussi bien sur mobile que sur ordinateur, afin de s'adapter à votre manière de travailler sur le terrain, en déplacement ou au bureau.",
+      "Oui. Untopo fonctionne sur smartphone, tablette et ordinateur, pour vous accompagner aussi bien sur le terrain qu'au bureau.",
   },
   {
     question: "Est-ce que l'application fonctionne sans réseau ou sans 4G ?",
     answer:
-      "Oui. Vous pouvez ouvrir un rapport, ajouter des informations, prendre des photos et continuer votre intervention même sans connexion. Dès que votre appareil retrouve du réseau, les données se synchronisent automatiquement.",
+      "Oui. Vous pouvez continuer votre intervention sans connexion : compléter un rapport, ajouter des informations et prendre des photos. Dès que la connexion est rétablie, la synchronisation se fait automatiquement.",
+  },
+  {
+    question: "Puis-je commencer un rapport sur le terrain et le terminer au bureau ?",
+    answer:
+      "Oui. Commencez sur le terrain, reprenez au bureau sur un autre appareil : vos brouillons se synchronisent automatiquement dès que la connexion est rétablie.",
   },
   {
     question: "Faut-il installer un logiciel ?",
-    answer: "Non. Untopo fonctionne directement depuis votre navigateur web, sans installation.",
-  },
-  {
-    question: "Les rapports PDF sont-ils conformes pour les assurances et les syndics ?",
     answer:
-      "Oui. Les rapports générés par Untopo intègrent les informations essentielles attendues dans le cadre d'un sinistre : identification du demandeur, distinction entre l'origine et les zones sinistrées, relevés des appareils de mesure et intégration claire des photos.",
+      "Non. Untopo fonctionne directement dans votre navigateur, sans installation. Il vous suffit de vous connecter à votre compte.",
   },
+  // Rapports
   {
     question: "Puis-je personnaliser mes rapports avec mon logo ?",
     answer:
-      "Oui. Vous pouvez ajouter votre logo afin de personnaliser automatiquement vos rapports et e-mails aux couleurs de votre entreprise.",
-  },
-  {
-    question: "Mes anciens rapports sont-ils conservés ?",
-    answer:
-      "Oui. Untopo conserve l'historique de vos interventions afin de retrouver facilement vos anciens rapports et informations de chantier.",
+      "Oui. Ajoutez votre logo pour personnaliser automatiquement vos rapports PDF et vos e-mails aux couleurs de votre entreprise.",
   },
   {
     question: "Puis-je envoyer mes rapports directement depuis Untopo ?",
     answer:
-      "Oui. Les rapports peuvent être envoyés directement depuis l'application avec une mise en page d'e-mail professionnelle.",
+      "Oui. Envoyez vos rapports directement depuis Untopo avec un e-mail professionnel prêt à être envoyé.",
+  },
+  {
+    question: "Les rapports sont-ils adaptés aux assurances et aux syndics ?",
+    answer:
+      "Oui. Les rapports générés par Untopo présentent les informations généralement attendues lors d'une intervention : identification du demandeur, origine de la fuite, zones affectées, relevés des appareils de mesure et photos intégrées dans une mise en page professionnelle.",
+  },
+  {
+    question: "Puis-je modifier un rapport après sa création ?",
+    answer:
+      "Oui. Tant qu'un rapport est en brouillon, vous pouvez le modifier, le compléter et le reprendre à tout moment — y compris depuis un autre appareil une fois synchronisé.",
+  },
+  {
+    question: "Combien de temps faut-il pour créer un rapport ?",
+    answer:
+      "Grâce à la dictée vocale, aux photos et à la génération automatique du PDF, vous créez vos rapports en quelques minutes plutôt qu'en repartant de zéro.",
+  },
+  // Compte
+  {
+    question: "Mes anciens rapports sont-ils conservés ?",
+    answer: "Oui. Retrouvez à tout moment l'historique de vos interventions.",
+  },
+  {
+    question: "Les données sont-elles sécurisées ?",
+    answer:
+      "Oui. Vos rapports et vos photos sont stockés de manière sécurisée et ne sont accessibles qu'à vous.",
+  },
+  {
+    question: "Mes clients verront-ils le logo Untopo ?",
+    answer:
+      "Non. Vos rapports PDF et vos e-mails affichent votre entreprise, avec votre logo et vos coordonnées. Le nom Untopo n'apparaît pas.",
   },
 ] as const;
